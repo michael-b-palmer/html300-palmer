@@ -1,6 +1,7 @@
 [
   {
     "name": "Paolo Maldini",
+    "imgName": "Paolo",
     "jobTitle": "Front End Developer",
     "company": "Web Weavers",
     "experience": "3 years",
@@ -14,6 +15,7 @@
   },
   {
     "name": "Barbara Bonansea",
+    "imgName": "Barbara",
     "jobTitle": "Software Engineer",
     "company": "Excellence in the Cloud",
     "experience": "12 years",
@@ -27,6 +29,7 @@
   },
   {
     "name": "Javier Hernandez",
+    "imgName": "Javier",
     "jobTitle": "User Experience Engineer",
     "company": "Web Sites and More",
     "experience": "5 years",
@@ -40,6 +43,7 @@
   },
   {
     "name": "Maribel Dominguez",
+    "imgName": "Maribel",
     "jobTitle": "Front End Engineer",
     "company": "Bits and Bytes",
     "experience": "6 years",

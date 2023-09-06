@@ -38,7 +38,7 @@
         display: flex;
         flex-direction: column;
 
-        padding: .625rem 8rem .625rem .625rem
+        padding: .625rem 8rem .625rem .625rem;
         margin: 1rem;
         background-color: $light-gray;
     }
@@ -76,12 +76,21 @@
     }
 
     @include media-smaller-than(700px) {
+
         flex-direction: column;
+        padding: .5rem;
+        border: 1rem solid $border-color;
+
+        .detail {
+            font-size: .8rem;
+        }
 
         .left-container,
         .info-container {
-            margin-right: 0;
+            margin: .5rem;
             width: 100%;
+            padding: .625rem clamp(.625rem, 1vw, 8rem) .625rem .625rem;
+
         }
     }
 }
