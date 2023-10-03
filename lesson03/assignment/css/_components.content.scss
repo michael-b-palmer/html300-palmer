@@ -12,6 +12,39 @@ html {
     padding: 2rem;
 }
 
-h1 {
-    color: $red;  
+@mixin detail-label($label) {
+    position: relative;
+
+    &::before {
+        content: $label + ":";
+        font-weight: bold;
+        display: inline-block;
+        margin-right: 0.5em;
+    }
+}
+
+.card {
+    .info-container {
+        .detail {
+            &.company {
+                @include detail-label('Company');
+            }
+
+            &.experience {
+                @include detail-label('Experience');
+            }
+
+            &.school {
+                @include detail-label('School');
+            }
+
+            &.major {
+                @include detail-label('Major');
+            }
+
+            &.email {
+                @include detail-label('Email');
+            }
+        }
+    }
 }

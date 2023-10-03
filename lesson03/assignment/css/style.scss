@@ -1,6 +1,102 @@
-// Import partials here
 @import 'base.normalize';
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
 
+.card {
+    display: flex;
+    border: 2rem solid $border-color;
+    padding: 1rem;
+    border-radius: $border-radius-default;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 1rem auto 1rem auto;
+    font-family: $sans-font;
+
+    .left-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem;
+        width: 225px;
+    }
+
+    .image-container {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 1rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .info-container {
+        display: flex;
+        flex-direction: column;
+        width: 370px;
+        padding: 2rem;
+        margin: 1rem;
+        background-color: $light-gray;
+    }
+
+    .name {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 0.325rem;
+    }
+
+    .title {
+        color: $gray;
+        font-style: italic;
+        margin-bottom: 0.325rem;
+
+    }
+    .code-languages {
+        font-size:.5rem;
+    }
+    .detail {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+
+        &:last-child {
+            margin-top: .25rem;
+            margin-bottom: 0rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: $black;
+        }
+
+        img {
+            padding-right: .5rem;
+        }
+    }
+
+    @include media-smaller-than(700px) {
+
+        flex-direction: column;
+        padding: .5rem;
+        border: 1rem solid $border-color;
+        min-width: 335px;
+    
+        .detail {
+            font-size: .8rem;
+        }
+
+        .left-container,
+        .info-container {
+            margin: .5rem;
+            width: 100%;
+            padding: .625rem clamp(.625rem, 2vw, 2rem) .625rem .625rem;
+
+    }
+    }
+}
