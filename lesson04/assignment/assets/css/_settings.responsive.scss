@@ -1,0 +1,4 @@
+//superfluous but required mixin
+@mixin smoothTransition($property: all, $duration: 0.3s, $timing: ease-in-out) {
+  transition: $property $duration $timing;
+}
