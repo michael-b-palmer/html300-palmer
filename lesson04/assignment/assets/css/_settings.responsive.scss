@@ -1,4 +1,4 @@
-//superfluous but required mixin
+//superfluous but required mixin to make it change colors less abruptly
 @mixin smoothTransition($property: all, $duration: 0.3s, $timing: ease-in-out) {
   transition: $property $duration $timing;
 }

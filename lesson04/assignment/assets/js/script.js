@@ -1,7 +1,7 @@
 // jQuery plugin for the marquee animation effect
 (function ($, window, undefined) {
     $.fn.marqueeify = function (options) {
-        // Merge user options with the default settings
+        // Merge my options with the default settings
         let settings = $.extend({
             horizontal: true,
             vertical: true,
