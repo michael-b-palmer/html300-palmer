@@ -13,10 +13,10 @@ const sass = require('gulp-sass')(require('sass'));
 // Directories to watch.
 // If watch & reload isn't working as expected, check that files you want watched can be found in these paths.
 const paths = {
-    scss: {src: './css/*.scss', dest: './css'},
-    data: {src: './data/', dest: './data/'},
-    js: {src: './*.js', dest: '.'},
-    html: {src: './*.html', dest: '.'}
+    scss: {src: './assets/css/*.scss', dest: './assets/css/'},
+    img: {src: './assets/img/', dest: './assets/img/'},
+    js: {src: './assets/js/*.js', dest: './assets/js/'},
+    html: {src: './*.html', dest: './'}
 };
 
 
