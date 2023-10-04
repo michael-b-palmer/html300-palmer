@@ -1,3 +1,6 @@
+// mixin it up
+@include responsiveScale();
+
 html,
 body {
   //* oh look, a variable in use!
@@ -8,6 +11,7 @@ body {
   overflow: hidden;
   position: relative;
 }
+
 .marquee {
   display: block;
   left: 0;
@@ -18,7 +22,9 @@ body {
 svg {
   display: block;
 }
-// had to get a mixin / transition in there somewhere... unfortuately the way I wanted this to work required jQuery for color changing, so I eschewed most css transitions and used js instead */
-.logo, .logo2 {
+
+// had to get a transition in there somewhere... unfortuately the way I wanted this to work required jQuery for color changing, so I eschewed most css transitions and used js instead */
+.logo,
+.logo2 {
   @include smoothTransition(fill, 0.5s, linear);
 }
