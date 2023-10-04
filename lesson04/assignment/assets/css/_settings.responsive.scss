@@ -2,7 +2,7 @@
 @mixin smoothTransition($property: all, $duration: 0.3s, $timing: ease-in-out) {
   transition: $property $duration $timing;
 }
-
+//shrink those cherries on mobile
 @mixin responsiveScale($width: 480px, $scaleFactor: 0.8) {
   @media (max-width: $width) {
     svg {
