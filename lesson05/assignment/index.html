@@ -1,15 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Assignment 05 - CSS Grid</title>
-    </head>
-    <body>
-        <main class="main">
-          
-        </main>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UX Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="hero"></div>
+        <nav class="nav">
+            <a href="#" class="nav__item nav__item--active">Work</a>
+            <a href="#" class="nav__item">About Me</a>
+            <a href="assets/palmer.mike.resume.pdf" download="palmer.mike.resume.pdf" class="nav__item">Resume</a>
+            <a href="#" class="nav__item nav__item--cherry">
+                <img src="assets/cherries.png" alt="Cherries" class="nav__icon">
+            </a>
+        </nav>
+        <div class="header">
+            <h1 class="header__title">Michael Palmer</h1>
+            <h2 class="header__subtitle">Product Designer</h2>
+            <p class="header__tagline">I'm a data-driven Product Designer focused on enterprise SaaS applications. </p>
+        </div>
+        <div class="content">
+            <div class="content__row">
+                <a href="admin-dashboard.html" class="tile">
+                    <h2 class="tile__header">Admin Dashboard Redesign</h2>
+                    <p class="tile__subtitle">Improving the onboarding experience, increasing adoption and clarifying the value proposition</p>
+                    <img src="/assets/tile1.png" alt="Dashboard Image" class="tile__image">
+                </a>
+
+                <a href="subscription-management.html" class="tile">
+                    <h2 class="tile__header">Enterprise Subscription Management</h2>
+                    <p class="tile__subtitle">Empowering organizations with self-service tools to view and manage complex subscriptions</p>
+                    <img src="/assets/tile4.png" alt="Subscription Management Image" class="tile__image">
+                </a>
+            </div>
+
+            <div class="content__row">
+                <a href="user-access.html" class="tile">
+                    <h2 class="tile__header">User Access Management</h2>
+                    <p class="tile__subtitle">Creating granular, delegated administrator permission profiles to manage access to specific assets</p>
+                    <img src="/assets/tile3.png" alt="Access Management Image" class="tile__image">
+                </a>
+
+                <a href="user-provisioning.html" class="tile">
+                    <h2 class="tile__header">User Provisioning with SCIM</h2>
+                    <p class="tile__subtitle">Combatting ambiguity by digging into technical details and rapidly iterating, resulting in a viable vision</p>
+                    <img src="/assets/tile2.png" alt="SCIM Image" class="tile__image">
+                </a>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>&copy; 2023 Mike Palmer</p>
+        </footer>
+    </div>
+</body>
+
 </html>
