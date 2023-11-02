@@ -1,13 +1,244 @@
+// Import external SCSS files for variables, responsive settings, and base normalize
+@import '_settings.variables';
+@import '_settings.responsive';
+@import '_base.normalize';
+
+// Base styles for the body and html elements
+body,
 html {
-    box-sizing: border-box;
+    margin: 0; // Reset margin
+    padding: 0; // Reset padding
+    width: 100%; // Full width
+    overflow-x: hidden; // Hide horizontal scrollbar
+    font-family: $font-primary; // Use primary font set in variables
+    background-color: $color-background; // Background color from variables
 }
 
-*,
-*:after,
-*:before {
-    box-sizing: inherit;
+// Container class styles
+.container {
+    display: grid; // Use grid layout
+    grid-template-rows: 0.5fr auto auto auto 0.1fr; // Define row sizes
+    width: 100%; // Full width
+    max-width: 90rem; // Maximum width
+    margin: auto; // Centered horizontally
+    height: 100vh; // Full viewport height
+    gap: .5rem; // Gap between grid items
+    grid-auto-flow: row; // Automatic placement in rows
+    grid-template-areas: // Define grid areas
+        "nav"
+        "hero"
+        "header"
+        "content"
+        "footer";
 }
 
-.main {
-    padding: 2rem;
+// Hero section styles
+.hero {
+    grid-area: hero; // Assign to hero area
+    display: flex; // Use flex layout
+    justify-content: center; // Center horizontally
+    align-items: center; // Center vertically
+    background-image: url('../assets/desktop-hero.png'); // Background image
+    background-size: cover; // Cover the entire area
+    background-position: center; // Center the background
+    background-repeat: no-repeat; // Do not repeat the background
+    height: 25vh; // Height is 25% of the viewport
+}
+
+// Navigation styles
+.nav {
+    grid-area: nav; // Assign to navigation area
+    display: flex; // Use flex layout
+    justify-content: left; // Align to the left
+    z-index: 10; // Higher stacking order
+    margin-left: 3rem; // Left margin
+    font-family: 'Montserrat', sans-serif; // Font family
+}
+
+// Header styles
+.header {
+    grid-area: header; // Assign to header area
+    display: flex; // Use flex layout
+    flex-direction: column; // Stack items vertically
+    padding-left: 3rem; // Left padding
+}
+
+// Styles for header title and content title
+.header__title,
+.content__title {
+    font-family: 'Montserrat', sans-serif; // Font family
+    margin-bottom: 0.25rem; // Bottom margin
+    color: #2C3D4F; // Text color
+}
+
+// Header subtitle styles
+.header__subtitle {
+    font-family: 'Raleway', sans-serif; // Font family
+    color: #477D95; // Text color
+    margin-top: 0; // Top margin
+}
+
+// Tagline styles for the header
+.header__tagline {
+    font-family: 'Raleway', sans-serif; // Font family
+    color: #2C3D4F; // Text color
+    margin-top: 0; // Top margin
+    margin-bottom: 3rem; // Bottom margin
+}
+
+// Styles for navigation items
+.nav__item {
+    text-decoration: none; // No underline
+    color: #477D95; // Text color
+    padding: 10px 15px 0px 10px; // Padding
+    transition: all 0.3s; // Transition effect
+}
+
+// Hover effect for navigation items
+.nav__item:hover {
+    font-weight: bold; // Make text bold
+    color: #477D95; // Text color
+}
+
+// Styles for active navigation item
+.nav__item--active {
+    font-weight: bold; // Make text bold
+    color: #2C3D4F; // Text color
+}
+
+// Hover effect for cherry icon in navigation
+.nav__item--cherry:hover .nav__icon {
+    animation: swing 1s ease-in-out infinite; // Apply swing animation
+}
+
+// Styles for content rows
+.content__row {
+    display: flex; // Use flex layout
+    justify-content: center; // Center horizontally
+    gap: 4rem; // Gap between items
+    margin-bottom: 1rem; // Bottom margin
+    width: 100%; // Full width
+}
+
+// Styles for content area
+.content {
+    grid-area: content; // Assign to content area
+    display: flex; // Use flex layout
+    flex-wrap: wrap; // Allow wrapping of items
+    justify-content: center; // Center horizontally
+    align-items: start; // Align items to the start
+    gap: 1rem 0.5rem; // Gap between items
+    margin-left: 1rem; // Left margin
+    margin-right: 1rem; // Right margin
+}
+
+// Styles for tiles
+.tile {
+    max-width: 450px; // Maximum width
+    max-height: 450px; // Maximum height
+    padding: 48px; // Padding
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); // Box shadow
+    text-align: left; // Text align to left
+    background-color: #5E8BAF; // Background color
+    transition: box-shadow 0.3s ease; // Transition for box shadow
+    border-radius: 5px; // Border radius
+    display: block; // Display as block
+    text-decoration: none; // No underline
+    color: inherit; // Inherit text color
+}
+
+// Hover effect for tiles
+.tile:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4); // Box shadow on hover
+}
+
+// Styles for tile header
+.tile__header {
+    font-size: 22px; // Font size
+    color: #E3EBF0; // Text color
+    margin: 0px 0px 10px 0px; // Margin
+    font-family: 'Montserrat', sans-serif; // Font family
+}
+
+// Styles for tile subtitle
+.tile__subtitle {
+    font-family: 'Raleway', sans-serif; // Font family
+    font-size: 16px; // Font size
+    color: #2C3D4F; // Text color
+    margin-bottom: 20px; // Bottom margin
+}
+
+// Styles for tile image
+.tile__image {
+    max-width: 100%; // Maximum width
+    height: auto; // Auto height
+    display: block; // Display as block
+}
+
+// Footer styles
+.footer {
+    margin-top: 5rem; // Top margin
+    grid-area: footer; // Assign to footer area
+    display: flex; // Use flex layout
+    justify-content: center; // Center horizontally
+}
+
+// Media query for max-width of 768px (mobile devices)
+@media (max-width: 768px) {
+    .container {
+        display: grid; // Use grid layout
+        grid-template-columns: 1fr; // Single column layout
+        grid-template-rows: auto auto auto auto; // Define row sizes
+        grid-template-areas: // Define grid areas
+            "nav"
+            "hero"
+            "header"
+            "content"
+            "footer";
+        gap: 0.5rem; // Gap between grid items
+        padding: 0; // Reset padding
+    }
+
+    .nav {
+        grid-area: nav; // Assign to navigation area
+        display: flex; // Use flex layout
+        justify-content: left; // Align to the left
+        z-index: 10; // Higher stacking order
+    }
+
+    .header {
+        grid-area: header; // Assign to header area
+        display: flex; // Use flex layout
+        flex-direction: column; // Stack items vertically
+    }
+
+    .content__row {
+        display: flex; // Use flex layout
+        flex-direction: column; // Stack items vertically
+        gap: 0; // No gap
+        margin-bottom: 1rem; // Bottom margin
+        width: 100%; // Full width
+    }
+
+    .content {
+        grid-area: content; // Assign to content area
+        display: flex; // Use flex layout
+        flex-direction: column; // Stack items vertically
+        justify-content: center; // Center horizontally
+        align-items: center; // Center vertically
+        padding: 0; // Reset padding
+    }
+
+    .tile {
+        max-width: calc(100% - 3rem ); // Maximum width with some margin
+        margin: 0.5rem 0; // Vertical margins
+        padding: 24px; // Padding
+    }
+
+    .tile__image {
+        max-width: 100%; // Maximum width
+        height: auto; // Auto height
+        display: block; // Display as block
+        margin: 0.5rem auto; // Margin
+    }
 }
