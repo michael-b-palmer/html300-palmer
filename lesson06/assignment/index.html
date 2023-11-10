@@ -1,15 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Assignment 06 - Bootstrap 4</title>
-    </head>
-    <body>
-        <main class="main">
-          
-        </main>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Header Image with Nav</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container-max">
+  
+  <!-- Navigation -->
+  <nav class="nav">
+    <a class="nav-item nav-link active" href="#">Work</a>
+    <a class="nav-item nav-link" href="admin-dashboard.html">Nav Bar Works Effortlessly</a>
+    <a class="nav-item nav-link" href="assets/palmer.mike.resume.pdf" download="palmer.mike.resume.pdf">Resume</a>
+    <a href="cherries.html" class="nav-item nav-item-cherry">
+        <img src="assets/cherries.png" alt="Cherries" class="nav-icon">
+        </a>
+  </nav>
+  
+  <!-- Header Image -->
+  <div class="header-image">
+    <!-- Content over your image (if any) -->
+  </div>
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4 header-responsive">Michael Palmer</h1>
+      <p class="lead subheader-responsive">Product Designer</p>
+      <p class="lead tagline-responsive">I'm a data-driven Product Designer focused on enterprise SaaS applications.</p>
+    </div>
+  </div>
+</div>
+<div class="container">
+    <div class="row">
+      <!-- Tile 1 -->
+      <div class="col-md-6 col-12">
+        <a href="admin-dashboard.html" class="card">
+          <div class="card-body">
+            <h5 class="card-title">Admin Dashboard Redesign</h5>
+            <p class="card-text">Improving the onboarding experience, increasing adoption and clarifying the value proposition</p>
+          </div>
+          <img class="card-img-top" src="assets/tile1.png" alt="Dashboard Image">
+        </a>
+      </div>
+      <!-- Tile 2 -->
+      <div class="col-md-6 col-12">
+        <a href="subscription-management.html" class="card">
+          <div class="card-body">
+            <h5 class="card-title">Enterprise Subscription Management</h5>
+            <p class="card-text">Empowering organizations with self-service tools to view and manage complex subscriptions</p>
+          </div>
+          <img class="card-img-top" src="assets/tile4.png" alt="Subscription Management Image">
+        </a>
+      </div>
+      <!-- Tile 3 -->
+      <div class="col-md-6 col-12">
+        <a href="user-access.html" class="card">
+          <div class="card-body">
+            <h5 class="card-title">User Access Management</h5>
+            <p class="card-text">Creating granular, delegated administrator permission profiles to manage access to specific assets</p>
+          </div>
+          <img class="card-img-top" src="assets/tile3.png" alt="Access Management Image">
+        </a>
+      </div>
+      <!-- Tile 4 -->
+      <div class="col-md-6 col-12">
+        <a href="user-provisioning.html" class="card">
+          <div class="card-body">
+            <h5 class="card-title">User Provisioning with SCIM</h5>
+            <p class="card-text">Combatting ambiguity by digging into technical details and rapidly iterating, resulting in a viable vision</p>
+          </div>
+          <img class="card-img-top" src="assets/tile2.png" alt="SCIM Image">
+        </a>
+      </div>
+    </div>
+  </div>
+<!-- Optional Bootstrap JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.9/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
 </html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header Image with Nav</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container-max">
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <a class="nav-item nav-link" href="index.html">Work</a>
+            <a class="nav-item nav-link active" href="admin-dashboard.html">Nav Bar Works Effortlessly</a>
+            <a class="nav-item nav-link" href="assets/palmer.mike.resume.pdf"
+                download="palmer.mike.resume.pdf">Resume</a>
+            <a href="cherries.html" class="nav-item nav-item-cherry">
+                <img src="assets/cherries.png" alt="Cherries" class="nav-icon">
+            </a>
+        </nav>
+
+        <div class="jumbotron jumbotron-fluid header-bg">
+            <div class="container">
+                <h1 class="display-4 header-responsive casestudy mt-0 mb-0">Admin Dashboard Redesign</h1>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="lead tagline-responsive casestudy mb-4">“This is really powerful - it’s so much better
+                            than what we have and it really feels like we’re addressing the need.” - Product Manager</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                        <!-- Trigger the Modal with this image -->
+                        <img src="assets/admin-old.png" alt="Old Admin Panel"
+                            class="img-fluid casestudy mt-3 modal-trigger" data-toggle="modal"
+                            data-target="#modalOldAdmin">
+
+                        <!-- The Modal -->
+                        <div class="modal fade" id="modalOldAdmin" tabindex="-1" role="dialog"
+                            aria-labelledby="modalOldAdminLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content" data-dismiss="modal">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalOldAdminLabel">Before</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="assets/admin-old-zoom.png" alt="Old Admin Panel" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                        <!-- Trigger the Modal with this image -->
+                        <img src="assets/admin-new.png" alt="New Admin Panel"
+                            class="img-fluid casestudy mt-3 modal-trigger" data-toggle="modal"
+                            data-target="#modalNewAdmin">
+
+                        <!-- The Modal -->
+                        <div class="modal fade" id="modalNewAdmin" tabindex="-1" role="dialog"
+                            aria-labelledby="modalNewAdminLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content" data-dismiss="modal">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalNewAdminLabel">After</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="assets/admin-new-zoom.png" alt="New Admin Panel" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container my-4 casestudy">
+            <div class="section">
+                <div class="row">
+                    <!-- Overview Section -->
+                    <div class="col-12 col-md-8 col-lg-8">
+                        <h1 class="section-header">OVERVIEW</h1>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4">
+                        <p class="details"><strong>Role:</strong> Product Designer</p>
+                        <p class="details"><strong>Tools:</strong> Figma, Miro, Lucidchart, Jira</p>
+                        <p class="details"><strong>Skills:</strong> Interviews, Flow Mapping, Workshop Facilitation,
+                            Competitive Analysis, Wireframing, Prototyping, UX Writing, Developer Handoff</p>
+                        <p class="details"><strong>Team:</strong> Product Manager, Developer, Product Designer (me)</p>
+                        <p class="details"><strong>Duration:</strong> 7 weeks</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Project Brief Section -->
+            <div class="section">
+                <div class="row">
+                    <div class="col-12">
+                        <h3>Project Brief</h3>
+                        <p>DocuSign provides a variety of tools for managing accounts and users. While all
+                            administrators have access to basic settings, DocuSign Admin represents a complex,
+                            enterprise-level set of admin tools.</p>
+                        <p>As DocuSign continues to grow, the number of users introduced to DocuSign Admin is
+                            increasing. I was tasked with finding a way to help smooth this transition.</p>
+                    </div>
+                </div>
+                <!-- The Problem Section -->
+                <div class="row">
+                    <div class="col-12">
+                        <h3>The Problem</h3>
+                        <p>Because DocuSign Admin is separate from the basic tools with which most admins are familiar,
+                            adding this new set of tools can be quite overwhelming. With a steady stream of new users
+                            encountering DocuSign Admin for the first time, we need to reduce the time required between
+                            account creation and productivity.</p>
+                        <p>Additionally, 20% of enterprise customers aren't using features they've paid for. This causes
+                            customer confusion and leads to unnecessary support cases and churn.</p>
+                    </div>
+                </div>
+                <!-- Goals Section -->
+                <div class="row">
+                    <div class="col-12">
+                        <h3>Goals</h3>
+                        <ul>
+                            <li>Understand the existing user experience</li>
+                            <li>Promote awareness and adoption of existing features</li>
+                            <li>Increase self-service opportunities and reduce support case volume</li>
+                            <li>Reduce time between organization creation and milestones</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="row">
+                    <!-- Design Process Section -->
+                    <div class="col-md-12">
+                        <h1 class="section-header">DESIGN PROCESS</h1>
+                        <p class="quote">"Though this be madness, yet there is method in 't" - Bill Shakespeare</p>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col text-center">
+                                <!-- Step Indicators -->
+                                <div class="process-steps d-flex justify-content-center mt-4">
+                                    <a href="#understand" class="process-step mx-2">
+                                        <div class="circle">1</div>
+                                        <span>Understand</span>
+                                    </a>
+                                    <div class="step-line"></div> <!-- Line between circles -->
+                                    <a href="#define" class="process-step mx-2">
+                                        <div class="circle">2</div>
+                                        <span>Define</span>
+                                    </a>
+                                    <div class="step-line"></div> <!-- Line between circles -->
+                                    <a href="#prototype" class="process-step mx-2">
+                                        <div class="circle">3</div>
+                                        <span>Prototype</span>
+                                    </a>
+                                    <div class="step-line"></div> <!-- Line between circles -->
+                                    <a href="#validate" class="process-step mx-2">
+                                        <div class="circle">4</div>
+                                        <span>Validate</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="row">
+                    <div class="col-12">
+                        <h3>SME Interviews</h3>
+                        <p>During the discovery phase of the project, I worked alongside a product manager as we
+                            interviewed several Customer Success Architects (CSAs). These are the folks out there in the
+                            trenches with our customers every day, delighting in their successes and sharing in their
+                            pain. We asked them to share some of that pain with us, and we got an earful from each
+                            participant.</p>
+                        <p>We spoke with seven CSAs in total, and quickly noticed a few common themes:</p>
+                    </div>
+                </div>
+                <!-- Goals Section -->
+                <div class="row">
+                    <div class="col-12">
+                        <ul>
+                            <li>The concept of two different sets of admin tools (basic and complex) is not well
+                                understood</li>
+                            <li>New users are often overwhelmed and have no idea what to do first</li>
+                            <li>In their confusion, new users often make 'mistakes' that are painful to correct</li>
+                            <li>Many existing users miss out on features due to a lack of awareness</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="row">
+                    <!-- User Flow Mapping Section -->
+                    <div class="col-md-4">
+                        <h3>User Flow Mapping</h3>
+                        <p>Ensuring a customer sets up their admin experience correctly is contingent on their
+                            understanding of where they are, what they need to do right now, and what they can do in the
+                            future.</p>
+                        <p>I mapped out the steps for setting up an organization, drawing on my product knowledge and
+                            filling in the gaps with details from the SME interviews.</p>
+                        <p>The map helped us answer countless 'does it do this when I do that?' questions and helped put
+                            us all on the same page.</p>
+                        <p>As a result, we were able to focus on the processes and identify pain points and
+                            opportunities for improvement.</p>
+                    </div>
+                    <div class="col-md-8 ">
+                        <!-- Trigger the Modal with this image -->
+                        <img src="assets/flow.png" alt="Admin User Flow"
+                            class="img-fluid casestudy mt-3 modal-trigger taller-image" data-toggle="modal"
+                            data-target="#modalAdminFlow">
+                        <p class="snark text-center mt-2">A journey of a thousand user complaints begins with a single
+                            map</p>
+                        <!-- The Modal -->
+                        <div class="modal fade" id="modalAdminFlow" tabindex="-1" role="dialog"
+                            aria-labelledby="modalAdminFlowLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content" data-dismiss="modal">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalAdminFlowLabel">Admin User Flow</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="assets/flow.png" alt="Admin User Flow" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="row">
+                    <!-- User Flow Mapping Section -->
+                    <div class="col-md-7">
+                        <h3>Workshop</h3>
+                        <p>With the map complete, I created a miro board and hosted a workshop with SMEs and the product
+                            manager to categorize and quantify the pain points.</p>
+                        <h5>Workshop Phases</h5>
+                        <ol>
+                            <li>Capture top concerns</li>
+                            <li>Group concerns by topic</li>
+                            <li>Brainstorm solutions to topic groups and identify benefits</li>
+                            <li>Identify next steps and create an implementation plan</li>
+                        </ol>
+                        <p>Having clearly identified the problem space, we began to explore potential solutions. We
+                            eventually landed on a redesign of the Admin homepage as the best choice for our MVP.</p>
+                        <p>By utilizing this real estate properly, we can establish a journey that customers can look
+                            forward to taking with us.</p>
+                        <h5>Why the Homepage?</h5>
+                        <ul>
+                            <li>It serves as the starting point for new and existing admins</li>
+                            <li>The existing version is spartan and lacks guidance or support content</li>
+                            <li>It's a cost-effective, light-touch solution with a measurable impact</li>
+                            <li>By providing information and guidance to users, we can greatly reduce or eliminate many
+                                of the pain points surfaced by the research</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-5 ">
+                        <!-- Trigger the Modal with this image -->
+                        <img src="assets/workshop.png" alt="Workshop Results"
+                            class="img-fluid casestudy mt-3 modal-trigger taller-image" data-toggle="modal"
+                            data-target="#modalAdminWorkshop">
+                        <p class="snark text-center mt-2">Post-it notes, labels, and groups? If that's not design
+                            thinking, I don't know what is!</p>
+
+                        <!-- The Modal -->
+                        <div class="modal fade" id="modalAdminWorkshop" tabindex="-1" role="dialog"
+                            aria-labelledby="modalAdminWorkshopLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content" data-dismiss="modal">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalAdminWorkshopLabel">Looks like a workshop!</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="assets/workshop.png" alt="Workshop Results" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section mb-7rem">
+                <div class="row">
+                    <!-- User Flow Mapping Section -->
+                    <div class="col-md-7">
+                        <h3>Desk Research</h3>
+                        <p>Having identified the solution we wanted to explore (a homepage refresh), I wanted to see how
+                            other large companies arrange their admin homepages. I reviewed several publicly available
+                            enterprise administration experiences.</p>
+                        <p>The first thing that became clear was the need for some sort of guidance or support material
+                            on the page. In an overwhelmingly technical space like this, guideposts and directions are
+                            essential.</p>
+                        <p>That said, even with guidance, there is just too much content to cover on one page, so
+                            progressive disclosure and support content are a must as well.</p>
+                        <p>Finally, allowing admins to customize their dashboard seems to be of great benefit; why tell
+                            them what to display when you can ask them what they want to see instead?</p>
+                    </div>
+                    <div class="col-md-5">
+                        <!-- Trigger the Modal with this image -->
+                        <img src="assets/comp-anal.png" alt="Desk Research"
+                            class="img-fluid casestudy mt-3 modal-trigger taller-image" data-toggle="modal"
+                            data-target="#modalCA">
+                        <p class="snark text-center mt-2">“Good artists copy. Great artists steal.” - Pablo Picasso</p>
+
+                        <!-- The Modal -->
+                        <div class="modal fade" id="modalCA" tabindex="-1" role="dialog" aria-labelledby="modalCALabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content" data-dismiss="modal">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalCALabel">Desk Research</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="assets/comp-anal.png" alt="Desk Research" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="row">
+                    <div class="col-12">
+                        <h3>Defining Success Metrics</h3>
+                        <p>We measured several baseline metrics and will continue to monitor for results. We also
+                            implemented Mixpanel tracking within the page to collect additional data.</p>
+                        <ul>
+                            <li><strong>Onboarding:</strong> Time elapsed between account creation and milestone tasks
+                            </li>
+                            <li><strong>Adoption:</strong> Percentage of customers who use most or all of their paid
+                                features</li>
+                            <li><strong>Usability:</strong> Customer interactions on the home page and linked pages
+                                (clicks, bounce, etc.)</li>
+                            <li><strong>Discoverability:</strong> Percentage of customers viewing the Features page</li>
+                            <li><strong>Self-service:</strong> Views to linked support content as well as the number of
+                                related support cases</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="row">
+                    <!-- User Flow Mapping Section -->
+                    <div class="col-md-7">
+                        <h3>Wireframing</h3>
+                        <p>Great - so now we know that we need to share something informational on the homepage, what
+                            should we focus on?</p>
+                        <p>This is where we combined the insights from the discovery phase with Mixpanel metrics from
+                            the existing homepage. What are users currently clicking on? What areas are they either
+                            ignoring or missing?</p>
+                        <p>With this knowledge in hand, I sketched out several wireframes to explore different layouts
+                            and components.</p>
+                        <h5>Areas of Exploration</h5>
+                        <ul>
+                            <li>A checklist or wizard to guide the setup process</li>
+                            <li>A 'completeness' tracker to gamify the experience</li>
+                            <li>A banner image with a personalized greeting</li>
+                            <li>Timely notifications to surface items needing attention</li>
+                            <li>Dynamic content to display the current status</li>
+                            <li>Static resources to provide context and support</li>
+                        </ul>
+
+                    </div>
+                    <div class="col-md-5 mb-4">
+                        <!-- Trigger the Modal with this image -->
+                        <img src="assets/wf.png" alt="Wireframes"
+                            class="img-fluid casestudy mt-3 modal-trigger taller-image" data-toggle="modal"
+                            data-target="#modalWF">
+                        <p class="snark text-center mt-2">Original homepage vs two (of several) simple wireframe
+                            explorations</p>
+
+                        <!-- The Modal -->
+                        <div class="modal fade" id="modalWF" tabindex="-1" role="dialog" aria-labelledby="modalWFLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content" data-dismiss="modal">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalWFLabel">Desk Research</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="assets/wf.png" alt="Wireframes" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="row">
+                    <div class="col-12 text-center mt-5">
+                        <p class="lead snark">💫 If you shoot for the stars and miss, just cut 90% and call it MVP 💫
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional Bootstrap JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.9/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </div>
+</body>
+
+</html>

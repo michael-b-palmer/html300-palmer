@@ -1,52 +1,70 @@
-// Media Query Generator
+// Responsive Mixins
+// Importing variable definitions
+@import '_settings.variables';
 
-@mixin media-query($mq) {
-
-    $breakpoint-found: false;
-
-    // Loop through the list of breakpoints we’ve provided in our settings file.
-    @each $breakpoint in $breakpoints {
-
-        // Grab the alias and the condition from their respective locations in
-        // the list.
-        $alias:     nth($breakpoint, 1);
-        $condition: nth($breakpoint, 2);
-
-        // If the media query we’ve specified has an alias and a condition...
-        @if $mq == $alias and $condition {
-
-            // ...tell the mixin that we’ve found it...
-            $breakpoint-found: true;
-
-            // ...and spit it out here.
-            @media #{$condition} {
-                @content;
-            }
-
-        }
-
-    }
-
-    // If the user specifies a non-exitent alias, send them a warning.
-    @if $breakpoint-found == false{
-        @warn "Oops! Breakpoint ‘#{$mq}’ does not exist."
-    }
-
+// Mixin for responsive header large
+@mixin responsive-header-large {
+  font-size: $header-size;
+  @media (max-width: 992px) { font-size: 2rem; }
+  @media (max-width: 768px) { font-size: 1.5rem; }
+  @media (max-width: 576px) { font-size: 1.25rem; }
 }
 
-// Add breakpoints
-$breakpoints: (
-    "xl"            "screen and (min-width: 1300px)",
-    "desk"          "screen and (min-width: 1024px)",
-    "lg"            "screen and (min-width: 920px)",
-    "tab"           "screen and (min-width: 768px)",
-    "mobile"        "screen and (max-width: 767px)",
-    "infograph"     "screen and (min-width: 540px)",
-    "med"           "screen and (min-width: 40em)",
-    "sm"            "screen and (min-width: 30em)",
-    "small"         "screen and (min-width: 20em)",
-    "tiny"          "screen and (max-width: 320px)",
-    "retina"        "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)",
-    "ie"            "all and(-ms-high-contrast: none), (-ms-high-contrast: active)",
-    "ipad"          "screen and (min-device-width : 768px) and (max-device-width : 1024px)"
-) !default;
+// Mixin for responsive subheader
+@mixin responsive-subheader {
+  font-size: $subheader-size;
+  @media (max-width: 992px) { font-size: 1rem; }
+  @media (max-width: 768px) { font-size: 0.875rem; }
+  @media (max-width: 576px) { font-size: 0.75rem; margin-bottom: .5rem; }
+}
+
+// Mixin for responsive tagline
+@mixin responsive-tagline {
+  font-size: $tagline-size;
+  @media (max-width: 992px) { font-size: .75rem; }
+  @media (max-width: 576px) { font-size: 0.75rem; }
+}
+
+// Mixin for responsive card title
+@mixin responsive-card-title {
+  font-size: $card-title-size;
+  @media (max-width: 992px) { font-size: 1rem; }
+  @media (max-width: 768px) { font-size: 0.875rem; }
+}
+
+// Mixin for responsive card text
+@mixin responsive-card-text {
+  font-size: $card-text-size;
+  @media (max-width: 992px) { font-size: .8rem; }
+}
+
+// Mixin for responsive modal image
+@mixin responsive-modal-image {
+  @media (max-width: 992px) { max-height: 300px; }
+}
+
+// Mixin for responsive navigation item
+@mixin responsive-nav-item {
+  @media (max-width: 768px) { font-size: 0.875rem; }
+  @media (max-width: 576px) { font-size: 0.75rem; }
+}
+
+// Mixin for responsive jumbotron container
+@mixin responsive-jumbotron-container {
+  @media (max-width: 576px) {
+    padding-left: 3rem;
+    margin-left: 0px;
+  }
+}
+
+// Mixin for responsive process steps
+@mixin responsive-process-steps {
+  @media (max-width: 576px) {
+    flex-direction: column;
+    align-items: flex-start;
+    .process-step:not(:last-child)::after { content: none; }
+    .process-step { padding: 0; display: flex; align-items: center; width: 100%; }
+    .circle { margin: 1rem; }
+    .process-step span { margin-left: 0.5rem; }
+  }
+}
