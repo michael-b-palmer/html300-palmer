@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header Image with Nav</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container-max">
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <a class="nav-item nav-link" href="index.html">Work</a>
+            <a class="nav-item nav-link" href="admin-dashboard.html">Nav Bar Works Effortlessly</a>
+            <a class="nav-item nav-link" href="assets/palmer.mike.resume.pdf" download="palmer.mike.resume.pdf">Resume</a>
+            <a href="cherries.html" class="nav-item nav-item-cherry">
+                <img src="assets/cherries-active.png" alt="Cherries" class="nav-icon">
+            </a>
+        </nav>
+
+        <div class="jumbotron jumbotron-fluid header-bg">
+            <div class="container">
+                <h1 class="display-4 header-responsive casestudy mt-0 mb-0">I am laziness incarnate</h1>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="lead tagline-responsive casestudy mb-4">I got tired and bored after hammering out the case study page, so here you go...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="container mt-5">
+                <h2>Cherry Facts</h2>
+                <div id="accordionCherryFacts" class="cherry-accordion">
+                    <!-- Accordion Item 1 -->
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" title="Look, a tooltip!">
+                                    Cherry Fact 1
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionCherryFacts">
+                            <div class="card-body">
+                                Cherries belong to the same fruit family as peaches, plums, apricots, and almonds.
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Accordion Item 2 -->
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" title="Look, a tooltip!">
+                                    Cherry Fact 2
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionCherryFacts">
+                            <div class="card-body">
+                                There are more than 1,000 varieties of cherries, but fewer than 10 are produced commercially.
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Accordion Item 3 -->
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" title="Look, a tooltip!">
+                                    Cherry Fact 3
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionCherryFacts">
+                            <div class="card-body">
+                                Cherry trees can take about 3 to 4 years after planting before they start bearing fruit.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        
+
+        <!-- Optional Bootstrap JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.9/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('[data-toggle="tooltip"]').tooltip(); 
+            });
+        </script>
+    </div>
+</body>
+
+</html>

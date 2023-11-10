@@ -1,0 +1,421 @@
+/* Consolidated and cleaned up CSS */
+
+/* Container max-width */
+.container-max {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; /* Bold for headings */
+}
+
+/* Specific style for h5 */
+h5 {
+  color: #424242;
+}
+
+/* Italic font style for snark class */
+.snark {
+  font-style: italic;
+}
+
+/* Body, paragraph, and list item font styles */
+body, p, li {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400; /* Regular for text */
+}
+
+/* Navigation styles */
+.nav {
+  list-style: none;
+  padding: 0 0 .5rem 3rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #477D95;
+  padding: 10px 15px 0px 10px;
+  transition: all 0.3s;
+}
+
+.nav-item:hover {
+  font-weight: bold;
+  color: #477D95;
+}
+
+.nav-item.nav-link.active {
+  font-weight: bold;
+  color: #2C3D4F;
+}
+
+.nav-item-cherry .nav-icon {
+  position: relative;
+  top: -.3rem;
+}
+
+.nav-item-cherry:hover .nav-icon {
+  animation: swing 1s ease-in-out infinite;
+}
+
+@keyframes swing {
+  0% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg); }
+  100% { transform: rotate(-10deg); }
+}
+
+/* Header image style */
+.header-image {
+  background: url('../assets/desktop-hero.png') no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  min-height: 200px;
+}
+
+/* Jumbotron styles */
+.jumbotron.jumbotron-fluid {
+  padding: 2rem 0;
+  margin: auto;
+}
+
+.jumbotron .display-4.header-responsive {
+  font-weight: bold;
+  margin-bottom: 0;
+  color: #2C3D4F;
+  font-size: 2.5rem; /* Default size for large screens */
+}
+
+.jumbotron .lead.subheader-responsive {
+  font-size: 1.75rem; /* Default size for large screens */
+  color: #477D95;
+  font-weight: bold;
+  margin-bottom: .75rem;
+}
+
+.jumbotron .lead.tagline-responsive {
+  font-size: 1rem; /* Default size for large screens */
+  color: #2C3D4F;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.jumbotron .container {
+  width: 100%;
+  padding-right: 15px; /* Bootstrap default */
+  padding-left: 15px; /* Bootstrap default */
+  margin-right: auto; /* Center align the container */
+  margin-left: auto; /* Center align the container */
+}
+
+/* Card styles */
+.card {
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.5);
+  margin-top: 1.5rem;
+  border-radius: 5px;
+  background-color: #5E8BAF;
+  text-decoration: none;
+}
+
+.card-title {
+  color: #E3EBF0;
+  font-size: 1.2rem;
+}
+
+.card-text {
+  color: #2C3D4F;
+  font-size: 1rem;
+}
+
+a.card {
+  text-decoration: none;
+  color: #2C3D4F;
+}
+
+.card-img-top {
+  margin: 25px;
+  width: auto;
+  border-radius: 0;
+}
+
+/* Case study page styles */
+.jumbotron .display-4.header-responsive.casestudy {
+  padding-bottom: 1rem;
+  font-size: 2rem; /* Default size for large screens */
+}
+
+.jumbotron .lead.tagline-responsive.casestudy {
+  font-size: 1.4rem; /* Default size for large screens */
+  color: #2C3D4F;
+  margin-bottom: 0;
+}
+
+.container-max img.modal-trigger {
+  cursor: zoom-in;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  margin: 0 auto; /* Center the image horizontally */
+  display: block; /* Center the image vertically within the container */
+}
+
+h1.section-header {
+  font-family: 'Oswald', sans-serif;
+  color: #424242;
+  font-size: 4rem;
+  padding: 0;
+}
+
+.casestudy h3 {
+  color: #2C3D4F;
+}
+
+.casestudy > .section:first-child {
+  margin-top: 3rem;
+}
+
+.section {
+  margin-bottom: 4rem;
+}
+
+.mb-7rem {
+  margin-bottom: 7rem;
+}
+
+.details {
+  margin-bottom: 0;
+  font-size: .8rem;
+}
+
+.quote {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #2C3D4F;
+}
+
+a.process-step {
+  text-decoration: none;
+}
+
+.process-steps {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.process-step {
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* Set relative positioning for pseudo-elements */
+  padding: 0 20px; /* Add some space on the left and right */
+}
+
+.process-step:not(:last-child)::after {
+  content: '';
+  height: 2px;
+  width: calc(100% + 10px); /* Increase the width to cover the gap */
+  background-color: #424242;
+  position: absolute;
+  top: 25px;
+  right: calc(-50% - 5px); /* Adjust the right position to match the width */
+  z-index: 0;
+}
+
+.circle {
+  border: 2px solid #424242;
+  background-color: #FFF;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+  color: #424242;
+  z-index: 1; /* Above the pseudo-element lines */
+}
+
+.circle:hover {
+  background-color: #424242;
+  color: #FFF;
+}
+
+.step-line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: #424242;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* This will center the line with the middle of the circles */
+  z-index: 0; /* Keep this at 0 or remove it to ensure the line doesn't go behind other elements */
+}
+
+.process-step span {
+  color: #424242;
+}
+
+.container-max img.modal-trigger.taller-image {
+  max-height: 450px;
+  height: 100%; /* Adjust this value as needed */
+  width: auto;
+  object-fit: cover; /* This ensures the image covers the area well */
+}
+
+.modal-content {
+  cursor: zoom-out; /* This applies the zoom-out cursor to all modal contents */
+}
+
+/* Cherry Styles */
+/* Custom accordion header styles for cherry-accordion */
+.cherry-accordion .card-header {
+  background-color: #4a76a8;
+  color: white;
+  border-bottom: 1px solid #3a5a78;
+}
+
+/* Style for collapsed state in cherry-accordion */
+.cherry-accordion .card-header .collapsed {
+  background-color: #6a8ab4;
+  color: #eef0f2;
+}
+
+/* Hover effect for cherry-accordion headers */
+.cherry-accordion .card-header:hover {
+  background-color: #3a5a78;
+  cursor: pointer;
+}
+
+/* Custom card body styling for cherry-accordion */
+.cherry-accordion .card-body {
+  background-color: #f0f4f7;
+  color: #333;
+}
+
+/* Style for the card border in cherry-accordion */
+.cherry-accordion .card {
+  border: 1px solid #cddded;
+}
+
+/* Remove border from the last card in cherry-accordion to avoid double borders */
+.cherry-accordion .card:last-child {
+  border-bottom: none;
+}
+
+/* Media Queries */
+/* Adjust font sizes on smaller screens */
+@media (max-width: 992px) {
+  .jumbotron .display-4.header-responsive {
+    font-size: 2rem; /* Slightly smaller font size */
+  }
+
+  .jumbotron .lead.subheader-responsive {
+    font-size: 1rem;
+  }
+
+  .jumbotron .lead.tagline-responsive {
+    font-size: .75rem; /* Default size for large screens */
+  }
+
+  .jumbotron .display-4.header-responsive.casestudy {
+    font-size: 1.5rem;
+  }
+
+  .jumbotron .lead.tagline-responsive.casestudy {
+    font-size: 1rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: .8rem;
+  }
+
+  .container-max img.modal-trigger.taller-image {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .jumbotron .display-4.header-responsive {
+    font-size: 1.5rem; /* Even smaller font size */
+  }
+
+  .jumbotron .lead.subheader-responsive {
+    font-size: 0.875rem;
+  }
+
+  .nav-item {
+    font-size: 0.875rem;
+  }
+
+  .jumbotron .lead.tagline-responsive {
+    font-size: .75rem; /* Default size for large screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .jumbotron .display-4.header-responsive {
+    font-size: 1.25rem; /* Smallest font size for xs screens */
+  }
+
+  .jumbotron .lead.subheader-responsive {
+    font-size: 0.75rem;
+    margin-bottom: .5rem;
+  }
+
+  .jumbotron .lead.tagline-responsive {
+    font-size: 0.75rem; /* Default size for large screens */
+  }
+
+  .nav-item {
+    font-size: 0.75rem;
+  }
+
+  .nav {
+    padding-left: 1rem;
+  }
+
+  .nav-item-cherry .nav-icon {
+    height: 16px;
+    width: 16px;
+  }
+
+  .jumbotron .container {
+    padding-left: 3rem;
+    margin-left: 0px;
+  }
+
+  .process-steps {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .process-step:not(:last-child)::after {
+    content: none; /* Remove the lines */
+  }
+
+  .process-step {
+    padding: 0; /* Reset padding if any was set */
+    display: flex; /* Align items in a row */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Take full width to accommodate the circle and text side by side */
+  }
+
+  .circle {
+    margin: 1rem; /* Adjust margin as needed */
+  }
+
+  .process-step span {
+    margin-left: 0.5rem; /* Add some space between the circle and the text */
+  }
+}

@@ -1,13 +1,346 @@
-html {
-    box-sizing: border-box;
+// Base Styles
+// Importing variable definitions
+@import '_settings.variables';
+@import '_settings.responsive';
+@import '_base.normalize';
+
+// Maximum width container
+.container-max {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-*,
-*:after,
-*:before {
-    box-sizing: inherit;
+// Font family and weight for headings
+h1, h2, h3, h4, h5, h6 {
+  font-family: $primary-font;
+  font-weight: 700; // Bold for headings
 }
 
-.main {
-    padding: 2rem;
+// Specific color for h5 headings
+h5 {
+  color: $tertiary-color;
+}
+
+// Italic style for snark class
+.snark {
+  font-style: italic;
+}
+
+// Font family and weight for body, paragraphs, and list items
+body, p, li {
+  font-family: $secondary-font;
+  font-weight: 400; // Regular for text
+}
+
+// Navigation list style
+.nav {
+  list-style: none;
+  padding: 0 0 .5rem 3rem;
+  font-family: $primary-font;
+}
+
+// Navigation item style
+.nav-item {
+  text-decoration: none;
+  color: $secondary-color;
+  padding: 10px 15px 0px 10px;
+  transition: all 0.3s;
+}
+
+// Hover effect for navigation items
+.nav-item:hover {
+  font-weight: bold;
+  color: $secondary-color;
+}
+
+// Active navigation link style
+.nav-item.nav-link.active {
+  font-weight: bold;
+  color: $primary-color;
+}
+
+// Cherry navigation icon positioning and animation
+.nav-item-cherry .nav-icon {
+  position: relative;
+  top: -.3rem;
+}
+
+.nav-item-cherry:hover .nav-icon {
+  animation: swing 1s ease-in-out infinite;
+}
+
+// Keyframes for swing animation
+@keyframes swing {
+  0% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg); }
+  100% { transform: rotate(-10deg); }
+}
+
+// Header image styling
+.header-image {
+  background: url('../assets/desktop-hero.png') no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  min-height: 200px;
+}
+
+// Jumbotron styles
+.jumbotron.jumbotron-fluid {
+  padding: 2rem 0;
+  margin: auto;
+}
+
+// Styles for header-responsive class within jumbotron
+.jumbotron .display-4.header-responsive {
+  font-weight: bold;
+  margin-bottom: 0;
+  color: $primary-color;
+  font-size: $header-size; // Default size for large screens
+}
+
+// Styles for subheader-responsive class within jumbotron
+.jumbotron .lead.subheader-responsive {
+  font-size: $subheader-size; // Default size for large screens
+  color: $secondary-color;
+  font-weight: bold;
+  margin-bottom: .75rem;
+}
+
+// Styles for tagline-responsive class within jumbotron
+.jumbotron .lead.tagline-responsive {
+  font-size: $tagline-size; // Default size for large screens
+  color: $primary-color;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+// Container styling within jumbotron
+.jumbotron .container {
+  width: 100%;
+  padding-right: 15px; // Bootstrap default
+  padding-left: 15px; // Bootstrap default
+  margin-right: auto; // Center align the container
+  margin-left: auto; // Center align the container
+}
+
+// Card styles
+.card {
+  box-shadow: 0 6px 6px 0 $dark-color;
+  margin-top: 1.5rem;
+  border-radius: 5px;
+  background-color: $accent-color;
+  text-decoration: none;
+}
+
+// Card title styles
+.card-title {
+  color: $light-color;
+  font-size: $card-title-size;
+}
+
+// Card text styles
+.card-text {
+  color: $primary-color;
+  font-size: $card-text-size;
+}
+
+// Card anchor tag styles
+a.card {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+// Card image top styles
+.card-img-top {
+  margin: 25px;
+  width: auto;
+  border-radius: 0;
+}
+
+// Case study styles within jumbotron
+.jumbotron .display-4.header-responsive.casestudy {
+  padding-bottom: 1rem;
+  font-size: 2rem; // Default size for large screens
+}
+
+// Case study tagline styles within jumbotron
+.jumbotron .lead.tagline-responsive.casestudy {
+  font-size: 1.4rem; // Default size for large screens
+  color: $primary-color;
+  margin-bottom: 0;
+}
+
+// Modal trigger image styling
+.container-max img.modal-trigger {
+  cursor: zoom-in;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  margin: 0 auto; // Center the image horizontally
+  display: block; // Center the image vertically within the container
+}
+
+// Section header styles
+h1.section-header {
+  font-family: $tertiary-font;
+  color: $tertiary-color;
+  font-size: 4rem;
+  padding: 0;
+}
+
+// Styles for h3 within case study
+.casestudy h3 {
+  color: $primary-color;
+}
+
+// Margin for the first child of the section in case study
+.casestudy > .section:first-child {
+  margin-top: 3rem;
+}
+
+// Section margin bottom style
+.section {
+  margin-bottom: 4rem;
+}
+
+// Margin bottom style for mb-7rem class
+.mb-7rem {
+  margin-bottom: 7rem;
+}
+
+// Details class styles
+.details {
+  margin-bottom: 0;
+  font-size: .8rem;
+}
+
+// Quote class styles
+.quote {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: $primary-color;
+}
+
+// Process step anchor tag style
+a.process-step {
+  text-decoration: none;
+}
+
+// Process steps flex container style
+.process-steps {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+// Process step flex item style
+.process-step {
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; // Set relative positioning for pseudo-elements
+  padding: 0 20px; // Add some space on the left and right
+}
+
+// Pseudo-element style for process steps not being the last child
+.process-step:not(:last-child)::after {
+  content: '';
+  height: 2px;
+  width: calc(100% + 10px); // Increase the width to cover the gap
+  background-color: $tertiary-color;
+  position: absolute;
+  top: 25px;
+  right: calc(-50% - 5px); // Adjust the right position to match the width
+  z-index: 0;
+}
+
+// Circle class styles
+.circle {
+  border: 2px solid $tertiary-color;
+  background-color: $white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+  color: $tertiary-color;
+  z-index: 1; // Above the pseudo-element lines
+}
+
+// Hover effect for circle class
+.circle:hover {
+  background-color: $tertiary-color;
+  color: $white;
+}
+
+// Step line style
+.step-line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: $tertiary-color;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); // This will center the line with the middle of the circles
+  z-index: 0; // Keep this at 0 or remove it to ensure the line doesn't go behind other elements
+}
+
+// Process step span color
+.process-step span {
+  color: $tertiary-color;
+}
+
+// Modal trigger for taller images
+.container-max img.modal-trigger.taller-image {
+  max-height: 450px;
+  height: 100%; // Adjust this value as needed
+  width: auto;
+  object-fit: cover; // This ensures the image covers the area well
+}
+
+// Modal content cursor style
+.modal-content {
+  cursor: zoom-out; // This applies the zoom-out cursor to all modal contents
+}
+
+// Cherry Styles
+// Accordion header styles
+.cherry-accordion .card-header {
+  background-color: #4a76a8;
+  color: $white;
+  border-bottom: 1px solid #3a5a78;
+}
+
+// Collapsed state styles for accordion header
+.cherry-accordion .card-header .collapsed {
+  background-color: #6a8ab4;
+  color: #eef0f2;
+}
+
+// Hover effect for accordion headers
+.cherry-accordion .card-header:hover {
+  background-color: #3a5a78;
+  cursor: pointer;
+}
+
+// Accordion card body styles
+.cherry-accordion .card-body {
+  background-color: #f0f4f7;
+  color: $black;
+}
+
+// Accordion card styles
+.cherry-accordion .card {
+  border: 1px solid #cddded;
+}
+
+// Style for the last card in accordion to avoid double borders
+.cherry-accordion .card:last-child {
+  border-bottom: none;
 }
