@@ -1,26 +1,36 @@
+<script>
+import ImageBorderMixin from '../ImageBorderMixin'; // Update the path as necessary
+
+export default {
+  name: 'CardComponent',
+  mixins: [ImageBorderMixin], // Use the mixin
+  props: {
+    title: String,
+    subtitle: String,
+    imageSrc: String,
+    imageAlt: String,
+    },
+  methods: {
+    handleImageClick() {
+      this.toggleBorder(); // Call mixin method
+    },
+  },
+}
+</script>
+
 <template>
   <div class="col-md-6 col-12">
     <a :href="link" class="card custom-card">
       <div class="card-body">
         <h5 class="card-title">{{ title }}</h5>
         <h6 class="card-subtitle mb-2 text-muted">{{ subtitle }}</h6>
-        <img :src="imageSrc" :alt="imageAlt" class="card-img-top">
+        <!-- Add @click handler -->
+        <img :src="imageSrc" :alt="imageAlt" class="card-img-top" :class="{'border-active': isBorderActive}" @click="handleImageClick">
       </div>
     </a>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'CardComponent',
-  props: {
-    title: String,
-    subtitle: String,
-    imageSrc: String,
-    imageAlt: String,
-  }
-}
-</script>
 
 <style scoped>
 .custom-card {
@@ -50,5 +60,8 @@ export default {
   display: block;
   width: calc(100% - 50px); /* Adjust width to fit inside the card */
   border-radius: 5px; /* Optional: if you want rounded corners */
+}
+.border-active {
+  border: 2px solid #007bff; /* Example blue border */
 }
 </style>
